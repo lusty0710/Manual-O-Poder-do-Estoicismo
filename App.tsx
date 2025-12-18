@@ -70,7 +70,7 @@ const CountdownTimer: React.FC<{ size?: 'normal' | 'large' }> = ({ size = 'norma
 };
 
 const CTAButton: React.FC<{ children: React.ReactNode; className?: string; onClick?: () => void; href?: string }> = ({ children, className, onClick, href }) => {
-  const styles = `bg-gradient-to-r from-[#ff4d00] to-[#ffc400] text-black font-black py-4 sm:py-6 px-8 sm:px-12 rounded-2xl hover:scale-105 active:scale-95 transition-all uppercase tracking-tight text-lg sm:text-xl shadow-2xl flex items-center justify-center gap-3 cursor-pointer ${className}`;
+  const styles = `bg-gradient-to-r from-[#ff4d00] to-[#ffc400] text-black font-black py-4 sm:py-6 px-8 sm:px-12 rounded-2xl hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(255,107,0,0.3)] active:scale-[0.98] active:translate-y-0.5 transition-all duration-300 ease-out uppercase tracking-tight text-lg sm:text-xl shadow-2xl flex items-center justify-center gap-3 cursor-pointer ${className}`;
   
   if (href) {
     return (
@@ -88,7 +88,7 @@ const CTAButton: React.FC<{ children: React.ReactNode; className?: string; onCli
 };
 
 const ModuleCard: React.FC<{ number: string, title: string, items: string[] }> = ({ number, title, items }) => (
-  <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 sm:p-8 relative overflow-hidden group">
+  <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 sm:p-8 relative overflow-hidden group transition-all hover:border-white/20">
     <div className="absolute top-2 right-4 text-white/5 text-6xl sm:text-7xl font-black">{number}</div>
     <h3 className="text-stoic-orange font-bold text-xl sm:text-2xl mb-4 sm:mb-6 relative z-10">{title}</h3>
     <div className="space-y-3 sm:space-y-4">
@@ -145,7 +145,7 @@ const Header: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick }) => (
         </div>
         <button 
           onClick={onCTAClick}
-          className="bg-stoic-orange text-white font-black px-4 sm:px-10 py-2.5 sm:py-3.5 rounded-xl uppercase text-[10px] sm:text-sm hover:bg-orange-600 active:scale-95 transition-all whitespace-nowrap shadow-lg shadow-orange-500/20"
+          className="bg-stoic-orange text-white font-black px-4 sm:px-10 py-2.5 sm:py-3.5 rounded-xl uppercase text-[10px] sm:text-sm hover:brightness-110 hover:-translate-y-0.5 transition-all whitespace-nowrap shadow-lg shadow-orange-500/20 active:scale-95"
         >
           Quero meu acesso
         </button>
@@ -218,7 +218,7 @@ const Hero: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick }) => {
           </div>
 
           <div className="flex flex-col items-center gap-6 pt-2 w-full">
-            <CTAButton onClick={onCTAClick} className="w-full sm:!w-[450px] shadow-orange-500/20">QUERO MEU ACESSO <MoveRight /></CTAButton>
+            <CTAButton onClick={onCTAClick} className="w-full sm:!w-[450px]">QUERO MEU ACESSO <MoveRight /></CTAButton>
             
             <div className="flex items-center gap-4">
                <div className="flex -space-x-2">
@@ -345,7 +345,7 @@ const Curriculum: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick }) => (
              Conteúdo Completo e Validado.
           </h2>
           <p className="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto font-medium">
-             Este manual foi forjado para quem exige transformation verdadeira, com conteúdo de alta qualidade e orientações diretas para o campo de batalha.
+             Este manual foi forjado para quem exige transformação verdadeira, com conteúdo de alta qualidade e orientações diretas para o campo de batalha.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {['PROFUNDIDADE', 'CLAREZA', 'PRÁTICA'].map(t => (
@@ -412,7 +412,7 @@ const Bonuses: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick }) => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-10 sm:mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white font-black text-xs tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-black text-xs tracking-widest uppercase shadow-[0_0_20px_rgba(255,255,255,0.2)]">
             <Gift className="w-4 h-4" /> BÔNUS EXCLUSIVOS
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
@@ -496,9 +496,9 @@ const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <section className="pt-0 pb-12 sm:pt-0 sm:pb-14 px-4 sm:px-8">
+    <section className="pt-10 pb-12 sm:pt-14 sm:pb-14 px-4 sm:px-8 bg-black">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
-        <div className="lg:w-1/3 space-y-6 text-center lg:text-left pt-6 lg:pt-0">
+        <div className="lg:w-1/3 space-y-6 text-center lg:text-left">
           <div className="flex flex-col items-center lg:items-start gap-4">
             <div className="bg-[#0a0a0a] px-4 py-2 border border-white/10 rounded-full text-[10px] sm:text-xs uppercase font-black tracking-[0.2em] inline-flex items-center gap-3">
                <span className="w-2 h-2 bg-stoic-orange rounded-full"></span> FEEDBACK DOS ALUNOS
