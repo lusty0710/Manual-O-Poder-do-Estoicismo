@@ -1,53 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>O Poder do Estoicismo | Forje sua Mente Inabalável</title>
-    
-    <!-- Meta Tags SEO -->
-    <meta name="title" content="O Poder do Estoicismo | Forje sua Mente Inabalável">
-    <meta name="description" content="Domine a arte do autocontrole e disciplina com o manual prático de estoicismo moderno.">
-    
-    <!-- Favicon local na pasta assets -->
-    <link rel="icon" type="image/png" href="./assets/Sem-Titulo-4 (1)-CMoBoB_z.webp">
-
-    <!-- CSS na pasta assets/css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    
-    <!-- Tailwind via CDN -->
+    <title>O Poder do Estoicismo | Forje sua Mente</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.3",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
       }
-    }
-    </script>
-
-    <!-- Facebook Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2836968409846191');
-    fbq('track', 'PageView');
-    </script>
-    
-    <!-- UTMify -->
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+      .font-serif {
+        font-family: 'Cinzel', serif;
+      }
+      .bg-stoic-orange {
+        background: linear-gradient(90deg, #ff6b00 0%, #ff9e00 100%);
+      }
+      .text-stoic-orange {
+        color: #ff6b00;
+      }
+      .border-stoic-orange {
+        border-color: #ff6b00;
+      }
+      .glow-orange {
+        box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- O Vite converterá este src="/index.tsx" para o bundle correto no build -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
