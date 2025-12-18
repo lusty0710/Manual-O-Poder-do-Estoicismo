@@ -7,7 +7,6 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .font-serif {
@@ -30,12 +29,10 @@ body {
   box-shadow: 0 0 30px rgba(255, 107, 0, 0.25);
 }
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -51,7 +48,6 @@ html {
   background: #ff6b00;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -61,7 +57,6 @@ html {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Selection */
 ::selection {
   background-color: #ff6b00;
   color: #000;
